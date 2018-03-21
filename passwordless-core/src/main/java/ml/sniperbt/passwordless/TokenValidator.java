@@ -1,5 +1,5 @@
 package ml.sniperbt.passwordless;
 
 public interface TokenValidator {
-    String validate(final String token) throws InvalidTokenException;
+    Token validate(final Token token) throws InvalidTokenException, ExpiredTokenException;
 }

@@ -5,9 +5,15 @@ import java.io.Serializable;
 public class Token implements Serializable {
 
     private final String token;
+    private final Long expirationDate;
 
-    public Token(final String token) {
+    public Token(final String token, final Long expiratonDate) {
         this.token = token;
+        this.expirationDate = expiratonDate;
+    }
+
+    public Long getExpirationDate() {
+        return expirationDate;
     }
 
     @Override
