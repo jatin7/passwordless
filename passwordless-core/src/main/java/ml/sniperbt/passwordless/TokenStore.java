@@ -4,5 +4,5 @@ public interface TokenStore {
 
     Token createToken(final String key);
 
-    void validateToken(final Token token) throws InvalidTokenException;
+    Token validateToken(final Token token) throws InvalidTokenException, ExpiredTokenException;
 }
